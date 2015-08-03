@@ -1,0 +1,77 @@
+/*========================IMPORTADOS==========================================*/
+/*-- Archivos, fuentes y recursos importados*/
+@import url(reset.css);
+/*=======================colores==============================================*/
+/*===============Fin colores==================================================*/
+/*=========================================ESTILOS DE LAYOUT==================*/
+/*==================nav============================================*/
+nav {
+  background-color: #3f51b5; }
+  nav #milogo {
+    margin-top: 5px; }
+
+footer.page-footer{
+  background-color: #3f51b5; }
+
+/*=========================================ESTILOS DE INDEX===================*/
+.row-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around; }
+  .row-flex .col-flex {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center; }
+
+@media only screen and (max-width: 800px) {
+  .row-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; } }
+.card.small {
+  height: 212px;
+  width: 90%; }
+  .card.small a {
+    color: #FF4081; }
+
+.display {
+  /*es la carta small*/
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  color: white; }
+  .display .display-items {
+    padding-left: 5px;
+    padding-right: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center; }
+    .display .display-items .info {
+      font-size: 60px; }
+  .display .informate {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; }
+    .display .informate p, .display .informate h2 {
+      margin: 0px; }
+    .display .informate p {
+      font-size: 20px; }
+
+#presta {
+  background-color: #009688; }
+
+#element {
+  background-color: #673ab7; }
+
+#users {
+  background-color: #607d8b; }
+
+.flota {
+  /*botoncito de simbolo + (mas)*/
+  margin-top: -22px;
+  margin-right: 15px;
+  background-color: #FF4081; }
+
+/*# sourceMappingURL=style.css.map */

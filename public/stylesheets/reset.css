@@ -1,0 +1,24 @@
+.site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.site-content {
+  flex: 1;
+}
+
+
+header, main, footer {
+   padding-left: 240px;
+ }
+
+ @media only screen and (max-width : 992px) {
+   header, main, footer {
+     padding-left: 0;
+   }
+ }
+ /*tamaño del contenedor de todo el cuerpo (excluyendo menu lateral)*/
+ .container{
+   width: 98%;
+ }

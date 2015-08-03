@@ -1,0 +1,116 @@
+/*========================IMPORTADOS==========================================*/
+/*-- Archivos, fuentes y recursos importados*/
+@import "reset.css";
+//========================VARIABLES=============================================
+//--Varibles de color a usar de forma global
+/*=======================colores==============================================*/
+$color: (primario: #3f51b5,secundario:#FF4081, aux-1:#009688, aux-2:#673ab7,
+aux-3:#607d8b, card-1:#ef5350, card-2:#ec407a, card-3:#7e57c2);
+/*===============Fin colores==================================================*/
+
+//------------------MIXINS GLOBALES---------------------------------------------
+@mixin border-radius ($data:false,$a:0px,$b:0px,$c:0px,$d:0px) {
+
+  @if $data == true {
+    border-top-left-radius: $a;
+    border-top-right-radius: $b;
+    border-bottom-right-radius: $c;
+    border-bottom-left-radius: $d;
+  } @else{
+    border-radius: $a;
+  }
+}
+
+@mixin flex ($direccion:row,$justifica:space-between){
+  display: flex;
+  flex-direction: $direccion;
+  justify-content: $justifica;
+}
+/*=========================================ESTILOS DE LAYOUT==================*/
+/*==================nav============================================*/
+
+nav{
+  background-color: map-get($color, primario);
+
+  #milogo{
+    margin-top: 5px;
+  }
+
+  .iconito{
+  }
+}
+
+footer{
+  background-color: map-get($color, primario);
+}
+
+
+/*=========================================ESTILOS DE INDEX===================*/
+.row-flex{
+  @include flex($justifica:space-around);
+
+  .col-flex{
+    width: 100%;
+    @include flex(row,center);
+  }
+}
+
+@media only screen and (max-width : 800px) {
+  .row-flex {
+    @include flex(column);
+  }
+}
+
+.card.small{
+  height: 212px;
+  width: 90%;
+
+  a{
+    color: map-get($color, secundario);
+  }
+}
+
+.display{/*es la carta small*/
+  @include flex();
+  color: white;
+
+  .display-items{
+    padding-left: 5px;
+    padding-right: 5px;
+    //width: 100%;
+    //height: 100%;
+    @include flex();
+    align-items: center;
+
+    .info{
+      font-size: 60px;
+      //padding-left: 5px;
+    }
+  }
+
+  .informate{
+    @include flex(column, center);
+
+    p, h2{
+      margin: 0px;
+    }
+
+    p{
+      font-size: 20px;
+    }
+  }
+}
+
+@each $etiqueta,$col in (presta:#009688, element:#673ab7, users:#607d8b){
+
+  ##{$etiqueta}{
+    background-color: $col;
+  }
+}
+
+
+.flota{/*botoncito de simbolo + (mas)*/
+  margin-top: -22px;
+  margin-right: 15px;
+  background-color: map-get($color, secundario);
+}
