@@ -10,7 +10,7 @@ nav {
   nav #milogo {
     margin-top: 5px; }
 
-footer.page-footer{
+footer.page-footer {
   background-color: #3f51b5; }
 
 /*=========================================ESTILOS DE INDEX===================*/
@@ -19,10 +19,17 @@ footer.page-footer{
   flex-direction: row;
   justify-content: space-around; }
   .row-flex .col-flex {
+    /*contienen las tarjetas*/
     width: 100%;
     display: flex;
-    flex-direction: row;
-    justify-content: center; }
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .row-flex .col-flex .mini-carta {
+      width: 90%;
+      min-height: 150px; }
+      .row-flex .col-flex .mini-carta a.white-my {
+        color: white; }
 
 @media only screen and (max-width: 800px) {
   .row-flex {
@@ -73,5 +80,12 @@ footer.page-footer{
   margin-top: -22px;
   margin-right: 15px;
   background-color: #FF4081; }
+
+.capitalLetter {
+  float: left;
+  font-size: 80px;
+  line-height: 60px;
+  padding: 2px;
+  margin-right: 5px; }
 
 /*# sourceMappingURL=style.css.map */

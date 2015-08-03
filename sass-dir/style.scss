@@ -4,8 +4,8 @@
 //========================VARIABLES=============================================
 //--Varibles de color a usar de forma global
 /*=======================colores==============================================*/
-$color: (primario: #3f51b5,secundario:#FF4081, aux-1:#009688, aux-2:#673ab7,
-aux-3:#607d8b, card-1:#ef5350, card-2:#ec407a, card-3:#7e57c2);
+$color: (primario: #3f51b5,secundario:#FF4081, aux-1:#00796b, aux-2:#673ab7,
+aux-3:#607d8b, card-1:#b71c1c, card-2:#512da8, card-3:#263238);
 /*===============Fin colores==================================================*/
 
 //------------------MIXINS GLOBALES---------------------------------------------
@@ -35,12 +35,9 @@ nav{
   #milogo{
     margin-top: 5px;
   }
-
-  .iconito{
-  }
 }
 
-footer{
+footer.page-footer{
   background-color: map-get($color, primario);
 }
 
@@ -49,9 +46,19 @@ footer{
 .row-flex{
   @include flex($justifica:space-around);
 
-  .col-flex{
+  .col-flex{/*contienen las tarjetas*/
     width: 100%;
-    @include flex(row,center);
+    @include flex(column,center);
+    align-items: center;
+
+    .mini-carta{
+      width: 90%;
+      min-height: 150px;
+
+      a.white-my{
+        color: white;
+      }
+    }
   }
 }
 
@@ -113,4 +120,13 @@ footer{
   margin-top: -22px;
   margin-right: 15px;
   background-color: map-get($color, secundario);
+}
+
+.capitalLetter
+{
+   float:left;
+   font-size:80px;
+   line-height:60px;
+   padding:2px;
+   margin-right: 5px;
 }
